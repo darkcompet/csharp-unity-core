@@ -1,9 +1,23 @@
 # Core for Unity
 
-This provides fundamental language-level features for all Unity projects.
+This provides fundamental framework-level features for Unity.
+
+- Features
+
+	```bash
+	- Extensions (GameObject, Coroutine,...)
+	- Resource, AssetBundle,...
+	```
+
+- Dependencies
+
+	```bash
+	# Tool.Compet.Core
+	https://github.com/darkcompet/csharp-core
+	```
 
 
-## Quick Start
+## How to install
 
 - Just include it into project by add as git-submodule.
 	
