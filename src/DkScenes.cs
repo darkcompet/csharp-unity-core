@@ -1,15 +1,22 @@
 namespace Tool.Compet.Core {
+	using UnityEngine;
+	using UnityEngine.SceneManagement;
+
 	public class DkScenes {
+		/// Load scene from given scene name.
 		public static void LoadScene(string sceneName) {
-			UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+			SceneManager.LoadScene(sceneName);
 		}
 
-		public void LoadSceneAsync(string sceneName) {
-			UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
+		/// Async load scene from given scene name.
+		/// Caller should use returned-value to check completion event with `AsyncOperation.isDone`.
+		public AsyncOperation LoadSceneAsync(string sceneName) {
+			return SceneManager.LoadSceneAsync(sceneName);
 		}
 
-		public static string GetActiveScene() {
-			return UnityEngine.SceneManagement.SceneManager.GetActiveScene().name; // "Menu"
+		/// @return Current active scene.
+		public static Scene GetActiveScene() {
+			return SceneManager.GetActiveScene();
 		}
 	}
 }
